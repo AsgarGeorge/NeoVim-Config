@@ -18,10 +18,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {}
-local plugins = {{
-  "folke/tokyonight.nvim",
-  lazy = false,
-  priority = 1000,
-}}
+local plugins = {
+  {"folke/tokyonight.nvim",lazy = false,priority = 1000},
+  {'nvim-telescope/telescope.nvim', tag = '0.1.8',dependencies = { 'nvim-lua/plenary.nvim' }}
+
+}
+
 require("lazy").setup(plugins, opts)
 vim.cmd[[colorscheme tokyonight]]
