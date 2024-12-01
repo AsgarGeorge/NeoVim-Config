@@ -49,7 +49,7 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live gr
 --config for the treeSitter
 local configs = require("nvim-treesitter.configs")
 configs.setup({
-          ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" ,"java" },
+          ensure_installed = { "c", "lua", "java","vim", "vimdoc"},
           highlight = { enable = true },
           indent = { enable = true },  
 })
