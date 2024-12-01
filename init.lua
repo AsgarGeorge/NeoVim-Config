@@ -45,3 +45,11 @@ local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+
+--config for the treeSitter
+local configs = require("nvim-treesitter.configs")
+configs.setup({
+          ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" ,"java" },
+          highlight = { enable = true },
+          indent = { enable = true },  
+})
