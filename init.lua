@@ -31,12 +31,15 @@ local plugins = {
 }
 require("lazy").setup(plugins, opts)
 
---setting the opted colorScheme
+
+--setting the theme
 vim.cmd[[colorscheme tokyonight]]
+--vim.cmd[[colorscheme tokyonight-day]]
+--vim.cmd[[colorscheme tokyonight-storm]]
 
 
 --highlight line color
-vim.cmd("highlight LineNr guifg=#ffffff")
+vim.cmd("highlight LineNr guifg=#ff9933")
 
 --setup for the telescope (which is an fuzzyFind tool for neovim)
 --Note: live grep may need commandLineTool "rip grep"
