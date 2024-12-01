@@ -38,6 +38,8 @@ vim.cmd[[colorscheme tokyonight]]
 vim.cmd("highlight LineNr guifg=#ffffff")
 
 --setup for the telescope (which is an fuzzyFind tool for neovim)
+--Note: live grep may need commandLineTool "rip grep"
+--Command for checking the telescope health   < :checkhealth telescope >
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
