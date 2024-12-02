@@ -26,10 +26,22 @@ local opts = {}
 local plugins = {
   {"folke/tokyonight.nvim",lazy = false,priority = 1000},
   {'nvim-telescope/telescope.nvim', tag = '0.1.8',dependencies = { 'nvim-lua/plenary.nvim' }},
-  {"nvim-treesitter/nvim-treesitter", build= ":TSUpdate"}
-
+  {"nvim-treesitter/nvim-treesitter", build= ":TSUpdate"},
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    }}
 }
 require("lazy").setup(plugins, opts)
+
+--key maps for neoTree
+vim.keymap.set('n', '<CMD-1>',':Neotree toggle <CR>')
+
+
 
 
 --setting the theme
