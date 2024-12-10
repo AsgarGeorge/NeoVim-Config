@@ -51,7 +51,12 @@ vim.cmd[[colorscheme tokyonight]]
 
 
 --highlight line color
-vim.cmd("highlight LineNr guifg=#ff9933")
+--vim.cmd("highlight LineNr guifg=#ffffff")
+vim.cmd("highlight LineNr ctermfg=Blue guifg=#ffffff")
+vim.cmd("highlight CursorLineNr ctermfg=Yellow guifg=#ff0000")
+
+--vim.cmd("highlight LineNr guifg=#ff9933")
+
 
 --setup for the telescope (which is an fuzzyFind tool for neovim)
 --Note: live grep may need commandLineTool "rip grep"
